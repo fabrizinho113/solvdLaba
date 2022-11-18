@@ -1,4 +1,4 @@
-package firstTask;
+package firsthomework;
 
 public class FirstApp {
     public static void main(String[] args) {
