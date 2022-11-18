@@ -1,11 +1,12 @@
 package firstTask;
+
 import java.util.Scanner;
 
 
-public class sortingAlgorithm {
+public class SortingAlgorithm {
 
     //Main
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
         //Length of the array
@@ -54,13 +55,13 @@ public class sortingAlgorithm {
 
         boolean swapped = true;
 
-        while(swapped){
+        while (swapped) {
 
             swapped = false;
 
-            for(int i = 0; i < array.length - 1; i++){
+            for (int i = 0; i < array.length - 1; i++) {
 
-                if(array[i] > array[i + 1]){
+                if (array[i] > array[i + 1]) {
                     swapped = true;
 
                     int temp = array[i];
