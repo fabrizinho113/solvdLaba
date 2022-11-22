@@ -31,12 +31,15 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Referees assigned for the match: \n");
-                    
+
                     Referee mainRef = new Referee("Danny", "Makkelie", 39, "Main Referee");
                     Referee lineJudgeOne = new Referee("Antonio", "Mateu Lahoz", 45, "Line Judge");
-                    Referee lineJudgeTwo = new Referee("Antonio", "Mateu Lahoz", 45, "Line Judge");
+                    Referee lineJudgeTwo = new Referee("Said", "Martinez", 31, "Line Judge");
 
+                    //Creating an array
                     Referee[] referees = {mainRef, lineJudgeOne, lineJudgeTwo};
+
+                    //ForEach
                     for (Referee referee : referees) {
                         System.out.println(referee.toString());
                     }
@@ -54,7 +57,7 @@ public class Main {
 
             option = Menu.selectOption();
 
-        } while (option != 6);
+        } while (option != 5);
 
 
     }
