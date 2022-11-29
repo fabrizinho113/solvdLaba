@@ -9,6 +9,14 @@ public class FootballClub extends Club {
     private int defeatCount;
     private int matchesPlayed;
 
+    public FootballClub(String name, int ranking) {
+        super(name, ranking);
+        this.winCount = winCount;
+        this.drawCount = drawCount;
+        this.defeatCount = defeatCount;
+        this.matchesPlayed = matchesPlayed;
+    }
+
     public void setWinCount(int winCount) {
         this.winCount = winCount;
     }

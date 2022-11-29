@@ -17,12 +17,12 @@ public class Match {
      *
      * */
 
-    final static BayernMunich bayern = new BayernMunich();
-    final static Player[] bayernArray = bayern.getPlayersBayern();
+    static BayernMunich bayern = new BayernMunich();
+    static Player[] bayernArray = bayern.getPlayersBayern();
 
-    final static RealMadrid realMadrid = new RealMadrid();
+    static RealMadrid realMadrid = new RealMadrid();
 
-    final static Player[] realArray = realMadrid.getPlayersRealM();
+    static Player[] realArray = realMadrid.getPlayersRealM();
 
 
     public static void firstTeamPlayers() {
