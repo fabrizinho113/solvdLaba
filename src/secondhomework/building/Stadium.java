@@ -1,5 +1,7 @@
 package secondhomework.building;
 
+import java.util.Objects;
+
 public class Stadium {
 
     private String name;
@@ -27,27 +29,20 @@ public class Stadium {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this)
-            return true;
-        if (!(obj instanceof Stadium))
-            return false;
-        Stadium stadium = (Stadium) obj;
-        return stadium.getCapacity() == this.getCapacity()
-                && stadium.getName() == this.getName();
-    }
-
-    @Override
-    public int hashCode() {
-        int result = 20;
-        result = 31 * result + capacity;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        return result;
-    }
-
-    @Override
     public String toString() {
         return "Stadium: " + name + "\n Capacity: " + capacity;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Stadium stadium = (Stadium) o;
+        return capacity == stadium.capacity && name.equals(stadium.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, capacity);
+    }
 }

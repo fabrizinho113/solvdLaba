@@ -1,5 +1,7 @@
 package secondhomework.teams;
 
+import java.util.Objects;
+
 public abstract class Club {
 
     private String name;
@@ -33,13 +35,15 @@ public abstract class Club {
 
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this)
-            return true;
-        if (!(obj instanceof Club))
-            return false;
-        Club club = (Club) obj;
-        return club.getRanking() == this.getRanking()
-                && club.getName() == this.getName();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Club club = (Club) o;
+        return ranking == club.ranking && name.equals(club.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, ranking);
     }
 }

@@ -1,5 +1,7 @@
 package secondhomework.person;
 
+import java.util.Objects;
+
 public abstract class Person {
 
     private String firstName;
@@ -44,15 +46,16 @@ public abstract class Person {
     public abstract void action();
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this)
-            return true;
-        if (!(obj instanceof Person))
-            return false;
-        Person person = (Person) obj;
-        return person.getFirstName() == this.getFirstName()
-                && person.getLastName() == this.getLastName() &&
-                person.getAge() == this.getAge();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && firstName.equals(person.firstName) && lastName.equals(person.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, age);
     }
 
     ;
