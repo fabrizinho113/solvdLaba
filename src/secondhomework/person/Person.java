@@ -1,6 +1,6 @@
-package secondhomework;
+package secondhomework.person;
 
-public class Person {
+public abstract class Person {
 
     private String firstName;
     private String lastName;
@@ -40,5 +40,21 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public abstract void action();
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this)
+            return true;
+        if (!(obj instanceof Person))
+            return false;
+        Person person = (Person) obj;
+        return person.getFirstName() == this.getFirstName()
+                && person.getLastName() == this.getLastName() &&
+                person.getAge() == this.getAge();
+    }
+
+    ;
 
 }

@@ -1,6 +1,9 @@
-package secondhomework;
+package secondhomework.teams;
 
 public class Formation {
+
+    //Recreate everything, so it's not "hardcoded" and add an amount to attribute for each player position.
+    //Example: forEach( player.getPosition() : players) {if(position == "DF"){defenders++}}
 
     private int defenders;
     private int midfielders;
