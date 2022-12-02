@@ -23,10 +23,6 @@ public class Player extends Person {
     }
 
 
-    public void action() {
-        System.out.println(getLastName() + "scores!");
-    }
-
     @Override
     public String toString() {
         return "Position: " + position + " - Full name: " + getFirstName() + " " + getLastName() + " - Age: " + getAge() + " - Rating: " + rating;

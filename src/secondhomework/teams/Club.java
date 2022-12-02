@@ -7,6 +7,8 @@ public abstract class Club {
     private String name;
     private int ranking;
 
+    private Country country;
+
     //Add more attributes? (fans)
 
     public Club() {

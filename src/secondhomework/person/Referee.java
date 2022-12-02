@@ -12,11 +12,6 @@ public class Referee extends Person {
     }
 
     @Override
-    public void action() {
-        System.out.println("Referee calls a fault!");
-    }
-
-    @Override
     public String toString() {
         return "Role: " + role + " - Full name: " + getFirstName() + " " + getLastName() + " - Age: " + getAge();
     }

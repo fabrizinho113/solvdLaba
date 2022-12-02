@@ -43,8 +43,6 @@ public abstract class Person {
         this.age = age;
     }
 
-    public abstract void action();
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
