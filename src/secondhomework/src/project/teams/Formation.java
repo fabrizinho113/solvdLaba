@@ -1,4 +1,4 @@
-package secondhomework.teams;
+package secondhomework.src.project.teams;
 
 public class Formation {
 

@@ -1,4 +1,4 @@
-package secondhomework.building;
+package secondhomework.src.project.building;
 
 import java.util.Objects;
 

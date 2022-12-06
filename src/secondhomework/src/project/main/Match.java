@@ -1,8 +1,11 @@
-package secondhomework.main;
+package secondhomework.src.project.main;
 
-import secondhomework.person.Player;
-import secondhomework.teams.BayernMunich;
-import secondhomework.teams.RealMadrid;
+import secondhomework.src.project.teams.Club;
+
+import static secondhomework.src.project.schedule.League.BUNDESLIGA;
+import static secondhomework.src.project.schedule.League.LA_LIGA;
+import static secondhomework.src.project.teams.Country.GERMANY;
+import static secondhomework.src.project.teams.Country.SPAIN;
 
 public class Match {
 
@@ -17,25 +20,9 @@ public class Match {
      *
      * */
 
-    static BayernMunich bayern = new BayernMunich();
-    static Player[] bayernArray = bayern.getPlayersBayern();
+    Club bayernMunich = new Club("Bayern Munich", 1, GERMANY, BUNDESLIGA);
+    Club realMadrid = new Club("Real Madrid", 3, SPAIN, LA_LIGA);
 
-    static RealMadrid realMadrid = new RealMadrid();
-
-    static Player[] realArray = realMadrid.getPlayersRealM();
-
-
-    public static void firstTeamPlayers() {
-        for (Player player : bayernArray) {
-            System.out.println(player.toString());
-        }
-    }
-
-    public static void secondTeamPlayers() {
-        for (Player player : bayernArray) {
-            System.out.println(player.toString());
-        }
-    }
 
     public static void play() {
 
@@ -46,7 +33,7 @@ public class Match {
         String fav = arg.getRanking() < sau.getRanking() ?
                 "Argentina is the favorite for this match"
                 :
-                "Saudi Arabian is is the favorite for this match";
+                "Saudi Arabian is the favorite for this match";
 
         //Print outcome of the if inline
         System.out.println(fav);

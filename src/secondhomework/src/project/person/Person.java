@@ -1,4 +1,4 @@
-package secondhomework.person;
+package secondhomework.src.project.person;
 
 import java.util.Objects;
 
