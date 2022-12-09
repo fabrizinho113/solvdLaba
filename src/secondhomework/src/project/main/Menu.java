@@ -1,5 +1,7 @@
 package secondhomework.src.project.main;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import secondhomework.src.project.exceptions.InvalidLeague;
 import secondhomework.src.project.exceptions.InvalidOption;
 
@@ -7,26 +9,18 @@ import java.util.Scanner;
 
 public abstract class Menu {
 
+    public static final Logger LOGGER = (Logger) LogManager.getLogger(Menu.class);
+
     public static void showMenu() {
-        System.out.println("""
-                1. Check Teams (WIP)\s
-                2. Check Champions League (WIP)\s
-                3. Check Referees (WIP)\s
-                4. See Match (WIP)\s
-                5. Exit\s
-                """
-        );
+        LOGGER.info("1. Check Leagues matches (WIP)\s" +
+                "2. Check Champions League matches (WIP)\s" +
+                "3. Exit \s");
     }
 
     public static void showLeagues() {
-        System.out.println("Select the league: \n");
-        System.out.println("1- Premier League\n" +
-                "2- Ligue 1\n" +
-                "3- La Liga\n" +
-                "4- Serie A\n" +
-                "5- Bundesliga\n" +
-                "6- Eredivisie\n" +
-                "7- Primeira Liga\n");
+        LOGGER.info("Select what matches you want to see: \n");
+        LOGGER.info("1- National leagues (Ligue 1, La Liga, Premier League, etc)\n" +
+                "2- Champions League\n");
     }
 
     public static int selectOption() throws InvalidOption {
@@ -37,7 +31,7 @@ public abstract class Menu {
 
         option = input.nextInt();
 
-        if (option < 1 || option > 5) {
+        if (option < 1 || option > 3) {
             throw new InvalidOption("Invalid option");
         }
         return option;

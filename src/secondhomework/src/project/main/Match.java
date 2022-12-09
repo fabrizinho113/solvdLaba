@@ -1,12 +1,5 @@
 package secondhomework.src.project.main;
 
-import secondhomework.src.project.teams.Club;
-
-import static secondhomework.src.project.schedule.League.BUNDESLIGA;
-import static secondhomework.src.project.schedule.League.LA_LIGA;
-import static secondhomework.src.project.teams.Country.GERMANY;
-import static secondhomework.src.project.teams.Country.SPAIN;
-
 public class Match {
 
     //Need massive improvements to the logic. A match is 90 minutes long, score starts at 0-0
@@ -19,9 +12,6 @@ public class Match {
      *
      *
      * */
-
-    Club bayernMunich = new Club("Bayern Munich", 1, GERMANY, BUNDESLIGA);
-    Club realMadrid = new Club("Real Madrid", 3, SPAIN, LA_LIGA);
 
 
     public static void play() {

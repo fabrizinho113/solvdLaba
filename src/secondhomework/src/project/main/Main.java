@@ -2,6 +2,7 @@ package secondhomework.src.project.main;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
+import secondhomework.src.project.collections.Clubs;
 import secondhomework.src.project.exceptions.InvalidLeague;
 import secondhomework.src.project.exceptions.InvalidOption;
 
@@ -9,10 +10,11 @@ import secondhomework.src.project.exceptions.InvalidOption;
 public class Main {
 
     public static final Logger LOGGER = (Logger) LogManager.getLogger(Main.class);
+    public static final Clubs CLUBS = new Clubs();
 
     public static void main(String[] args) {
 
-        System.out.println("Welcome! \n");
+        LOGGER.info("Start of the algorithm");
 
         int option = 0;
 
@@ -28,24 +30,29 @@ public class Main {
 
         switch (option) {
             case 1:
+
+                Menu.showLeagues();
+
                 try {
                     option = Menu.selectLeague();
+                    LOGGER.info("Option selected successfully");
                 } catch (InvalidLeague e) {
                     LOGGER.warn(e.getMessage());
                 }
 
-                
+
             case 2:
-                System.out.println("Real Madrid: ");
-                Match.secondTeamPlayers();
-                    /*
-                    System.out.println("\nFormation: ");
-                    Formation lineupSau = new Formation(5, 4, 1);
-                    System.out.println(lineupSau.toString());
-                     */
+                Menu.showLeagues();
+
+                try {
+                    option = Menu.selectLeague();
+                    LOGGER.info("Option selected successfully");
+                } catch (InvalidLeague e) {
+                    LOGGER.warn(e.getMessage());
+                }
+                
                 break;
             case 3:
-                System.out.println("Referees assigned for the match (WIP): \n");
                     /*
                     Referee mainRef = new Referee("Danny", "Makkelie", 39, "Main Referee");
                     Referee lineJudgeOne = new Referee("Antonio", "Mateu Lahoz", 45, "Line Judge");
@@ -60,12 +67,6 @@ public class Main {
                     }
                      */
                 break;
-            case 4:
-                System.out.println("(WIP)");
-                //Match.play();
-                break;
-            case 5:
-                System.out.println("Exiting program....");
 
         }
 

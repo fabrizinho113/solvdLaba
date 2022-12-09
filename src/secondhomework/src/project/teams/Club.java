@@ -25,8 +25,9 @@ public class Club {
         this.league = league;
     }
 
-    public Club(String bayern_munich, int ranking, String germany, League bundesliga) {
+    public Club(String name, int ranking, String country, League league) {
     }
+
 
     public String getName() {
         return name;
